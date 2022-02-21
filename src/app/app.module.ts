@@ -12,6 +12,9 @@ import { PosterComponent } from './home/poster/poster.component';
 import { ContactContainerComponent } from './pages/contact/contact-container/contact-container.component';
 import { ContactFormComponent } from './pages/contact/contact-form/contact-form.component';
 import { ContactDetailsComponent } from './pages/contact/contact-details/contact-details.component';
+import { RegisterationComponent } from './pages/registeration/registeration.component';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeContainerComponent } from './home/home-container/home-container.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ContactDetailsComponent } from './pages/contact/contact-details/contact
     PosterComponent,
     ContactContainerComponent,
     ContactFormComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    RegisterationComponent,
+    LoginComponent,
+    HomeContainerComponent
   ],
   imports: [
     BrowserModule,
