@@ -15,6 +15,10 @@ import { ContactDetailsComponent } from './pages/contact/contact-details/contact
 import { RegisterationComponent } from './pages/registeration/registeration.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeContainerComponent } from './home/home-container/home-container.component';
+import { ServiceCardComponent } from './client/client-browsing/service-card/service-card.component';
+import { FilterComponent } from './client/client-browsing/filter/filter.component';
+import { PaginationComponent } from './client/client-browsing/pagination/pagination.component';
+import { ClientBrwosingContainerComponent } from './client/client-browsing/client-brwosing-container/client-brwosing-container.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { HomeContainerComponent } from './home/home-container/home-container.com
     ContactDetailsComponent,
     RegisterationComponent,
     LoginComponent,
-    HomeContainerComponent
+    HomeContainerComponent,
+    ServiceCardComponent,
+    FilterComponent,
+    PaginationComponent,
+    ClientBrwosingContainerComponent
   ],
   imports: [
     BrowserModule,
