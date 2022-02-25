@@ -19,6 +19,7 @@ import { ServiceCardComponent } from './client/client-browsing/service-card/serv
 import { FilterComponent } from './client/client-browsing/filter/filter.component';
 import { PaginationComponent } from './client/client-browsing/pagination/pagination.component';
 import { ClientBrwosingContainerComponent } from './client/client-browsing/client-brwosing-container/client-brwosing-container.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ClientBrwosingContainerComponent } from './client/client-browsing/clien
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

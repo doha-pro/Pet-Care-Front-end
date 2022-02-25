@@ -1,104 +1,106 @@
-<div class="container py-5 ">
-    <div class="row g-5">
-        <div class="col-lg-4">
-            <h4>
-            </h4>
-            <div class="col-12">
-                <div class="row">
-                    <span class="col-12">
-                <strong>By Pages</strong>
-            </span>
-                    <br>
-                    <div class="dropdown col-3">
-                        <span>From</span>
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Page
-              <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <input class="form-control" id="from-page" type="text" placeholder="Search..">
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                        </ul>
-                    </div>
+<!-- filters -->
 
-                    <div class="dropdown col-3">
-                        <span>To</span>
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Page
-              <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <input class="form-control" id="to-page" type="text" placeholder="Search..">
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <span class="col-12">
-                <strong>By Time</strong>
-            </span>
-                    <br>
-                    <div class="dropdown col-3">
-                        <span>From</span>
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Time
-              <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <input class="form-control" id="from-time" type="text" placeholder="Search..">
-                            <li><a href="#">9:00</a></li>
-                            <li><a href="#">10:00</a></li>
-                            <li><a href="#">11:00</a></li>
-                            <li><a href="#">12:00</a></li>
-                            <li><a href="#">13:00</a></li>
-                            <li><a href="#">14:00</a></li>
-                            <li><a href="#">15:00</a></li>
-                            <li><a href="#">16:00</a></li>
-                            <li><a href="#">17:00</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="dropdown col-3">
-                        <span>To</span>
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Time
-              <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <input class="form-control" id="to-time" type="text" placeholder="Search..">
-                            <li><a href="#">9:00</a></li>
-                            <li><a href="#">10:00</a></li>
-                            <li><a href="#">11:00</a></li>
-                            <li><a href="#">12:00</a></li>
-                            <li><a href="#">13:00</a></li>
-                            <li><a href="#">14:00</a></li>
-                            <li><a href="#">15:00</a></li>
-                            <li><a href="#">16:00</a></li>
-                            <li><a href="#">17:00</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <span class="col-12">
-                <strong>By Type</strong>
-            </span>
-                    <br>
-                    <div class="dropdown col-4">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Type
-              <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <input class="form-control" id="type" type="text" placeholder="Search..">
-                            <li>
-                                <a href="#">Pets</a>
-                            </li>
-                            <li><a href="#">Boarding Places</a></li>
-                            <li><a href="#"> Training </a></li>
-                            <li><a href="#">Others</a></li>
-                        </ul>
-                    </div>
-
-
+<h4>
+    Filters
+</h4>
+<form (ngSubmit)="applyFilter()" #filterForm="ngForm" class="col-12">
+    <!-- By Price -->
+    <div class="row">
+        <span class="col-12">
+              <strong class="text-primary">By Price </strong>
+         </span>
+        <br>
+        <div class="col-3">
+            <span>From</span>
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <input class="form-control" id="from-price" name="from-price" placeholder="0" type="text">
                 </div>
             </div>
+        </div>
 
+        <div class="col-3">
+            <span>To</span>
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <input class="form-control" id="to-price" name="to-price" placeholder="1000" type="text">
+                </div>
+            </div>
+        </div>
+        <br>
+
+    </div>
+    <br>
+    <!-- By time -->
+    <div class="row">
+        <span class="col-12">
+            <strong class="text-primary">By Time</strong>
+        </span>
+        <br>
+        <div class=" col-3">
+            <span>From</span>
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <input class="form-control" id="from-time" name="from-time" placeholder="9:00" type="text">
+                </div>
+            </div>
+        </div>
+        <div class=" col-3">
+            <span>To</span>
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <input class="form-control" id="to-time" name="to-time" placeholder="3:00" type="text">
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    <br>
+    <!-- by address -->
+    <div class="row">
+        <span class="col-12">
+                        <strong class="text-primary">By Address</strong>
+                    </span>
+        <br>
+        <div class=" col-3">
+            <span>City</span>
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <input class="form-control" id="city" type="text" name="city" placeholder="">
+                </div>
+            </div>
+        </div>
+        <div class=" col-3">
+            <span>State</span>
+            <div class="form-group row">
+                <div class="col-xs-2">
+                    <input class="form-control" id="state" type="text" name="state" placeholder="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- by type -->
+    <div class="row">
+        <span class="col-12">
+                       <strong class="text-primary">By Type</strong>
+                      </span>
+        <br>
+        <div class="dropdown col-4">
+            <label class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Type
+        </label>
+
+            <select name="type" id="" class="dropdown-menu">
+                    <option value="vets">Vets</option>
+                    <option value="ranch">Ranch</option>
+                    <option value="private">private</option>
+                    <option value="hotel">Hotel</option>
+            </select>
+
+        </div>
+
+
+    </div>
+
+    <br>
+    <button type="submit" class=" btn btn-primary py-2 px-3 mx-5 ">Apply</button>
+</form>
